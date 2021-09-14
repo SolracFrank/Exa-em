@@ -9,3 +9,8 @@ CREATE TABLE `modelovendido` (
     REFERENCES `examenp1`.`vendedor` (`codigoVendedor`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+
+ALTER TABLE `modelovendido` 
+DROP FOREIGN KEY `fk_venta_vendedor`;
+ALTER TABLE `modelovendido` 
+DROP COLUMN `fkcodigoVendedor`;
